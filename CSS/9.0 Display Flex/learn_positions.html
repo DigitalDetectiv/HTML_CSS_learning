@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning Guide</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+      height: 2000px; /* Makes the page extra long so you can test scrolling */
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .box {
+      width: 250px;
+      padding: 15px;
+      margin: 15px 0;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* 1. STATIC */
+    .static-box {
+      position: static;
+      background-color: #4CAF50;
+    }
+
+    /* 2. RELATIVE */
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 40px;
+      background-color: #2196F3;
+    }
+
+    /* 3. ABSOLUTE PARENT & CHILD CONTAINER */
+    .parent-container {
+      position: relative; /* Acts as the anchor for the absolute child */
+      background-color: #e0e0e0;
+      border: 2px dashed #666;
+      height: 150px;
+      margin: 40px 0;
+      padding: 10px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 180px;
+      background-color: #ff9800;
+      margin: 0; /* Removes default box margins */
+    }
+
+    /* 4. FIXED */
+    .fixed-box {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 150px;
+      background-color: #E91E63;
+      z-index: 1000; /* Keeps it on top of other elements */
+    }
+
+    /* 5. STICKY */
+    .sticky-box {
+      position: sticky;
+      top: 0; /* Sticks to the very top edge when you scroll down */
+      background-color: #9C27B0;
+      width: 100%;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Positioning Interactive Guide</h1>
+  <p>Scroll down the page slowly to observe how the Pink and Purple boxes behave compared to the others.</p>
+
+  <!-- FIXED DEMO -->
+  <div class="box fixed-box">
+    📌 FIXED<br>
+    I am glued to the screen. I will never move, even if you scroll.
+  </div>
+
+  <!-- STICKY DEMO -->
+  <div class="box sticky-box">
+    🧲 STICKY: I behave normally until you scroll down to me, then I lock to the top edge!
+  </div>
+
+  <!-- STATIC DEMO -->
+  <div class="box static-box">
+    📦 STATIC (Default)<br>
+    I sit perfectly in the normal order of the page.
+  </div>
+
+  <!-- RELATIVE DEMO -->
+  <div class="box relative-box">
+    🔄 RELATIVE<br>
+    I am shifted 20px down and 40px right from my original spot. Notice the blank gap left above me!
+  </div>
+
+  <!-- ABSOLUTE DEMO -->
+  <div class="parent-container">
+    <p style="color: #333; margin: 0;">📁 RELATIVE PARENT CONTAINER</p>
+    
+    <div class="box absolute-box">
+      🚀 ABSOLUTE CHILD<br>
+      I am locked to the bottom-right corner of my parent container.
+    </div>
+  </div>
+
+  <h2>Keep scrolling down...</h2>
+  <p>The pink box stays with you. The purple box stays stuck at the top edge of your browser view.</p>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+.centreones{
+    text-align:center;
+}
+
+.color-title{
+    font-weight : 1000;
+
+}
+
+img{
+    height : 200px;
+    width : 200px
+}
+
+#red{
+    color : red;
+
+}
+#blue{
+    color : blue;
+    
+}
+#orange{
+ color : orange;
+    
+}
+#green{
+    color : green;
+    
+}
+#yellow{
+    color : yellow;
+    
+}

@@ -1,0 +1,31 @@
+/* Write your code here: */
+h1,h2{
+    color : blueviolet;
+}
+
+/* .box >p.done.check{
+    color :firebrick;
+} */
+
+.box > .done{
+    color :firebrick;
+
+}
+
+.box li {
+    color : blue;
+
+}
+
+.box,li.done{
+    color : seagreen;
+
+}
+
+/* body > ul .done{
+    font-size : 0.5rem;
+} */
+
+ul p.done{
+    font-size: 0.5rem;
+}
